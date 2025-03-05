@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio del reto</title>
+    <meta name="descripcion" content="Un portafolio para el primer reto para aprender a programar">
+    <meta name="Keywords" content="aprender, programar, reto, html, cositas">
+    <meta name="autor" content="yo msmo">
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#sobre mi">Sobre mí</a></li>
+            <li><a href="#estudios">Estudios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#horario">Horario</a></li>
+        </ul>
+    </nav>
+    <main>
+    <section id="sobre mi">
+        <h2>Sobre mí</h2>
+        <p>Me llamo Rubén actualmente estudio DAM y aspiro a ser discípulo de Joanne :-) al acabar los estudios.</p>
+        <img src="\imagenes\gorra1.jpeg" />
+        <h2>Mis hobbies son:</h2>
+        <ol>
+            <li>Dormir</li>
+            <li>Comer</li>
+            <li>Sobrevivir</li>
+        </ol>
+    </section>
+    <section id="estudios">
+        <h2>Obtuve las titulaciones de:</h2>
+        <ul>
+            <li>EGB y ESO hayá por la edad del bronce</li>
+            <li>Electricidad por la edad del hierro</li>
+            <li>S.P. por la edad media</li>
+        </ul>
+
+    </section>
+</section id="horario">
+        <h2>Horario</h2>
+        <h5>Nuestro horario de las clases es:</h5>
+        <table border="2">
+            <caption>DAM</caption><!--Título de la tabla-->
+            <tr><!--Encabezado de la tabla-->
+                <th>HORARIO</th><!--1HORARIO último VIERNES-->
+                <th>LUNES</th>
+                <th>MARTES</th>
+                <th>MIERCOLES</th>
+                <th>JUEVES</th>
+                <th>VIERNES</th>
+            </tr>
+            <tr><!--1 Fila-->
+                <th>16:00-17:00</th><!--1 Celda vertical-->
+                <td>Intinerario empleabilidad</td>
+                <td>Bases de datos</td>
+                <td></td>
+                <td><i>Tutoria Entornos de desarrollo</i></td>
+                <td></td>
+            </tr>
+            <tr><!--2 Fila-->
+                <th>17:00-18:00</th><!--2 Celda vertical-->
+                <td>Lenguaje de marcas</td>
+                <td>Entornos de desarollo</td>
+                <td><i>Tutoría Itinerario empleabilidad</i></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr><!--3 Fila-->
+                <th>18:00-19:00</th><!--3 Celda vertical-->
+                <td><i>Tutoría Lenguaje de marcas</i></td>
+                <td></td>
+                <td>Programación</td>
+                <td>Sistemas informáticos</td>
+                <td><i>Tutoría Máster</i></td>
+            </tr>
+            <tr><!--4 Fila-->
+                <th>19:00-20:00</th><!--4 Celda vertical-->
+                <td>MPO</td>
+                <td>Tutoría MPO</td>
+                <td><i>Tutoría Programación</i></td>
+                <td><i>Tutoría Sistemas informáticos</i></td>
+                <td></td>
+            </tr>
+            <tr><!--5 Fila-->
+                <th>20:00-21:00</th><!--5 Celda vertical-->
+                <td></td>
+                <td><i>Tutoría Base de datos</i></td>
+                <td>Máster</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p><b>Rellena el formulario</b></p>
+    <form action="datos de contacto" method="post">
+        <li>
+        <label for="name">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"/>
+        <label for="name">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos"/>
+        <label for="name">Teléfono:</label>
+        <input type="text" id="teléfono" name="teléfono"/>
+        <label for="name">Email:</label>
+        <input type="text" id="Email" name="Email"/>
+        </from>
+
+    <form action="desplegable" method="post">
+        <p><label for="Sexo"><b>Elige tu sexo:</b></label>
+            <select id="Sexo" name="Sexo">
+               <option value="femenino">Femenino</option>
+               <option value="masculino">Masculino</option>
+               <option value="N/C">Prefiero no decirlo</option>
+            </select></p>
+         </form>
+
+    <from action="checkbox" method="post">
+         <p><b>Elige un color:</b></p>
+       <input type="checkbox" id="Rojo" value="Rojo" />
+       <label for="Rojo">Rojo</label>
+       <input type="checkbox" id="Negro" value="Negro" />
+       <label for="Negro">Negro</label>
+       <input type="checkbox" id="Azul" value="Azul" />
+       <label for="Azul">Azul</label>
+       <input type="checkbox" id="Amarillo" value="Amarillo" />
+       <label for="Amarillo">Amarillo</label>
+        </from>
+    
+    <from action="textarea" method="post">
+       <p><b>Mensaje</b></p>
+       <textarea name="textarea" rows="10" cols="50">Escribe aquí tu mensaje</textarea>
+         </from>
+
+    <from action="button" method="post">
+        <p><button type="submit">ENVIAR</button></p>
+    </from>
+
+         </li>
+    </section>
+
+    </main>
+</header>
+</html>
