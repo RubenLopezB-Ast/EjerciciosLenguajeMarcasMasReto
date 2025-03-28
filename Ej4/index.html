@@ -1,0 +1,515 @@
+<!--En CSS, el símbolo # y el símbolo . tienen funciones muy diferentes. 
+Cuando usar una u otra
+
+
+
+📌 Estructura de lo que te quiero contar
+ 🔹 Qué es
+ 🔹 Dónde se usa
+ 🔹 Ejemplo práctico con código HTML y CSS
+ 🔹 Efecto visual y explicación
+ 🔹 Errores comunes y cómo evitarlos
+
+🔹 1️⃣ HTML Classes
+📌 ¿Qué es?
+Las clases (class) permiten agrupar múltiples elementos y aplicarles el mismo estilo.
+📍 ¿Dónde se usa? → Se coloca en cualquier etiqueta dentro de <body>.
+
+Ejemplo: Aplicar una clase a múltiples elementos
+<section>
+    <h2>HTML Classes</h2>
+    <p class="destacado">Este es un párrafo destacado.</p>
+    <p class="destacado">Otro párrafo con la misma clase.</p>
+    <p>Este párrafo no tiene clase.</p>
+</section>
+
+📌 Efecto visual: Todos los elementos con class="destacado" tendrán color azul y negrita.
+📍 Código CSS en styles.css:
+.destacado {
+    color: blue;
+    font-weight: bold;
+}
+
+✔ Errores comunes:
+ ❌ Usar mayúsculas en clases (.Destacado) → No funcionará porque las clases son sensible a mayúsculas y minúsculas.
+ ❌ Repetir class="destacado" en un solo elemento → No hay problema, pero es innecesario si el elemento solo tiene una clase.
+
+🔹 2️⃣ HTML Id
+📌 ¿Qué es?
+Un id en HTML es un identificador único para un elemento en la página.
+📍 ¿Dónde se usa? → En cualquier etiqueta HTML dentro de <body>.
+
+Ejemplo: Usar un ID para aplicar estilo único
+<section>
+    <h2>HTML Id</h2>
+    <p id="importante">Este párrafo tiene un ID único.</p>
+</section>
+
+📌 Efecto visual: Solo este párrafo tendrá color rojo y tamaño de fuente más grande.
+📍 Código CSS en styles.css:
+#importante {
+    color: red;
+    font-size: 20px;
+}
+
+✔ Errores comunes:
+ ❌ Usar el mismo id en varios elementos → NO es válido, los id deben ser únicos.
+
+🔹 3️⃣ HTML Iframes
+📌 ¿Qué es?
+Los iframes (<iframe>) permiten incrustar una página web dentro de otra.
+📍 ¿Dónde se usa? → Dentro de <body>.
+
+Ejemplo: Insertar Wikipedia en un iframe
+<section>
+    <h2>HTML Iframes</h2>
+    <iframe src="https://www.wikipedia.org" width="600" height="400"></iframe>
+</section>
+
+📌 Efecto visual: Se mostrará la página de Wikipedia dentro del marco (iframe).
+✔ Errores comunes:
+ ❌ Intentar incrustar páginas que bloquean iframes (Google, YouTube en algunos casos).
+
+🔹 4️⃣ HTML File Paths
+📌 ¿Qué es?
+Las rutas de archivos (file paths) indican la ubicación de imágenes, documentos u otros recursos en la web.
+📍 ¿Dónde se usa? → En atributos como src en imágenes o href en enlaces.
+
+Ejemplo: Insertar una imagen desde una carpeta
+<section>
+    <h2>HTML File Paths</h2>
+    <img src="images/ejemplo.jpg" alt="Ejemplo de imagen">
+</section>
+
+📌 Efecto visual: Se mostrará una imagen almacenada en la carpeta images/.
+✔ Errores comunes:
+ ❌ Escribir rutas incorrectas (img/ejemplo.jpg en vez de images/ejemplo.jpg).
+
+🔹 5️⃣ HTML Head
+📌 ¿Qué es?
+La sección <head> contiene metadatos y configuraciones importantes para la página.
+📍 ¿Dónde se usa? → Dentro de <head>.
+
+Ejemplo: Configuración básica del <head>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicios de HTML</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+📌 Efecto visual:
+ ✔ Se aplicarán los estilos de styles.css.
+ ✔ Se mostrará el favicon en la pestaña del navegador.
+✔ Errores comunes:
+ ❌ Olvidar <meta charset="UTF-8">, lo que puede causar errores con caracteres como ñ o á.
+
+Voy a continuar con los puntos restantes, explicándolos con más detalle, ejemplos prácticos y efectos visuales claros.
+
+🔹 6️⃣ HTML Layout (Diseño de la página web)
+📌 ¿Qué es?
+Define la estructura del sitio web con etiquetas como:
+ ✔ <header> (encabezado)
+ ✔ <nav> (barra de navegación)
+ ✔ <section> (secciones de contenido)
+ ✔ <article> (artículo independiente)
+ ✔ <aside> (contenido lateral)
+ ✔ <footer> (pie de página)
+📍 ¿Dónde se usa? → Dentro de <body>, organizando el contenido.
+
+Ejemplo: Estructura de una página web
+<header>
+    <h1>Mi Página Web</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#seccion1">Sección 1</a></li>
+        <li><a href="#seccion2">Sección 2</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="seccion1">
+        <h2>Sección 1</h2>
+        <p>Contenido de la primera sección.</p>
+    </section>
+
+    <section id="seccion2">
+        <h2>Sección 2</h2>
+        <p>Contenido de la segunda sección.</p>
+    </section>
+</main>
+
+<footer>
+    <p>Derechos Reservados 2024</p>
+</footer>
+
+📌 Efecto visual: La página tendrá un encabezado, un menú de navegación, secciones y un pie de página bien organizados.
+✔ Errores comunes:
+ ❌ Usar solo <div> para la estructura en lugar de etiquetas semánticas.
+
+🔹 7️⃣ HTML JavaScript
+📌 ¿Qué es?
+Permite agregar interactividad con el elemento <script>.
+📍 ¿Dónde se usa? → Dentro de <body> o en un archivo externo .js.
+
+Ejemplo: Mostrar un mensaje al hacer clic en un botón
+<section>
+    <h2>HTML JavaScript</h2>
+    <button onclick="mostrarMensaje()">Haz clic aquí</button>
+    <p id="mensaje"></p>
+
+    <script>
+        function mostrarMensaje() {
+            document.getElementById("mensaje").innerHTML = "¡Hola! Este mensaje fue generado con JavaScript.";
+        }
+    </script>
+</section>
+
+📌 Efecto visual: Al hacer clic en el botón, aparecerá un mensaje en la página.
+✔ Errores comunes:
+ ❌ Olvidar asociar el onclick="funcion()" en el botón.
+
+🔹 8️⃣ HTML Favicon
+📌 ¿Qué es?
+El favicon es el pequeño icono que aparece en la pestaña del navegador.
+📍 ¿Dónde se usa? → Dentro de <head>.
+
+Ejemplo: Agregar un favicon
+<head>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+📌 Efecto visual: El favicon aparecerá en la pestaña del navegador.
+✔ Errores comunes:
+ ❌ Usar un formato de imagen incorrecto (debe ser .ico, .png o .svg).
+
+🔹 9️⃣ HTML Responsive
+📌 ¿Qué es?
+Permite que la página se adapte a diferentes dispositivos (móviles, tablets, computadoras).
+📍 ¿Dónde se usa? → Dentro de <head> y en styles.css.
+
+Ejemplo: Hacer la página responsive
+📍 Código en styles.css:
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+📌 Efecto visual:
+ ✔ La fuente será más pequeña en pantallas pequeñas.
+ ✔ El menú de navegación cambiará de horizontal a vertical en pantallas pequeñas.
+✔ Errores comunes:
+ ❌ No usar meta viewport en <head>, lo que evita que la página se vea bien en móviles.
+
+🔹 🔟 HTML Computercode
+📌 ¿Qué es?
+Permite mostrar fragmentos de código en la web sin que se interpreten como HTML.
+📍 ¿Dónde se usa? → Dentro de <body> en documentación técnica.
+
+Ejemplo: Mostrar código en una página
+<section>
+    <h2>HTML Computercode</h2>
+    <p>Ejemplo de código en HTML:</p>
+    <pre>
+        <code>
+            &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+        </code>
+    </pre>
+</section>
+
+📌 Efecto visual: Se verá un fragmento de código HTML bien formateado.
+📍 Código CSS en styles.css:
+code {
+    background: #eee;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+✔ Errores comunes:
+ ❌ Olvidar usar &lt; y &gt; en el código para evitar que se renderice como HTML.
+
+🔹 1️⃣1️⃣ HTML Semantics
+📌 ¿Qué es?
+Las etiquetas semánticas ayudan a definir el significado del contenido en una página web.
+📍 ¿Dónde se usa? → Dentro de <body>, para estructurar correctamente la página.
+Ejemplo: Uso de etiquetas semánticas
+<section>
+    <h2>HTML Semantics</h2>
+    <article>
+        <h3>Artículo Destacado</h3>
+        <p>Este contenido está dentro de la etiqueta <code>&lt;article&gt;</code>.</p>
+    </article>
+
+    <aside>
+        <p>Esta es una barra lateral usando la etiqueta <code>&lt;aside&gt;</code>.</p>
+    </aside>
+</section>
+
+📌 Efecto visual: Se destacará el <article> como contenido principal y el <aside> como una barra lateral.
+📍 Código CSS en styles.css:
+article {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+}
+
+aside {
+    font-style: italic;
+    color: gray;
+}
+
+✔ Errores comunes:
+ ❌ Usar <div> en lugar de etiquetas semánticas sin necesidad.
+
+🔹 1️⃣2️⃣ HTML Style Guide
+📌 ¿Qué es?
+Son buenas prácticas para escribir HTML limpio, ordenado y legible.
+📍 ¿Dónde se usa? → En toda la estructura de index.html.
+Ejemplo: Código bien estructurado
+<section>
+    <h2>HTML Style Guide</h2>
+    <p>Ejemplo de código bien estructurado con sangría y comentarios:</p>
+    <pre>
+        <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="es"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;Ejemplo&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;Encabezado&lt;/h1&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+    </pre>
+</section>
+
+📌 Efecto visual: Se verá el código bien organizado en la página.
+✔ Errores comunes:
+ ❌ No usar indentación adecuada (tabulaciones o espacios).
+ ❌ No usar comentarios  para aclarar secciones del código.
+
+🔹 1️⃣3️⃣ HTML Symbols
+📌 ¿Qué es?
+Permite insertar símbolos especiales como ©, €, ®, →, etc.
+📍 ¿Dónde se usa? → Dentro de <body>, en texto o tablas.
+Ejemplo: Insertar símbolos en HTML
+<section>
+    <h2>HTML Symbols</h2>
+    <p>Ejemplo de símbolos en HTML:</p>
+    <ul>
+        <li>&copy; - Copyright</li>
+        <li>&reg; - Marca Registrada</li>
+        <li>&euro; - Euro</li>
+        <li>&pound; - Libra Esterlina</li>
+    </ul>
+</section>
+
+📌 Efecto visual: Se mostrarán diferentes símbolos especiales en una lista.
+✔ Errores comunes:
+ ❌ Intentar escribir los símbolos directamente en código sin usar &nombre; o &#código;.
+
+🔹 1️⃣4️⃣ HTML Emojis
+📌 ¿Qué es?
+Permite insertar emojis en el contenido sin necesidad de imágenes.
+📍 ¿Dónde se usa? → Dentro de <body>, en párrafos o listas.
+Ejemplo: Insertar emojis en HTML
+<section>
+    <h2>HTML Emojis</h2>
+    <p>Ejemplo de emojis en HTML:</p>
+    <p>😀 😎 🚀 ❤️ 🎉</p>
+</section>
+
+📌 Efecto visual: Se mostrarán emojis en la página de manera clara.
+✔ Errores comunes:
+ ❌ Usar imágenes en lugar de emojis cuando se pueden insertar directamente.
+
+🔹 1️⃣5️⃣ HTML Charsets
+📌 ¿Qué es?
+Define la codificación de caracteres para evitar errores con ñ, á, é.
+📍 ¿Dónde se usa? → Dentro de <head>.
+Ejemplo: Configuración de UTF-8
+<head>
+    <meta charset="UTF-8">
+</head>
+
+📌 Efecto visual: Se podrán escribir caracteres especiales sin problemas.
+✔ Errores comunes:
+ ❌ No definir charset="UTF-8", lo que puede provocar que los caracteres especiales no se muestren correctamente.
+
+🔹 1️⃣6️⃣ HTML URL Encode
+📌 ¿Qué es?
+Permite codificar caracteres en URLs para que sean interpretadas correctamente.
+📍 ¿Dónde se usa? → En enlaces dentro de <body>.
+Ejemplo: Codificación de una URL
+<section>
+    <h2>HTML URL Encode</h2>
+    <p>Ejemplo de una URL codificada:</p>
+    <p><code>https%3A%2F%2Fwww.ejemplo.com</code></p>
+</section>
+
+📌 Efecto visual: Se mostrará una URL codificada en la página.
+✔ Errores comunes:
+ ❌ Intentar escribir caracteres especiales en URLs sin codificar (#, &, ?).
+
+🔹 1️⃣7️⃣ HTML Favicon 
+📌 ¿Qué es?
+ El favicon es el pequeño icono que aparece en la pestaña del navegador.
+📍 ¿Dónde se usa? → Dentro de <head>.
+Ejemplo: Agregar un favicon
+<head>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+📌 Efecto visual: El favicon aparecerá en la pestaña del navegador.
+✔ Errores comunes:
+ ❌ No incluir el type="image/x-icon" en navegadores antiguos.
+
+🔹 1️⃣8️⃣ HTML vs. XHTML - Explicación Extrema Detallada 🚀
+Voy a explicar HTML vs. XHTML en profundidad, con cada aspecto detallado, ejemplos claros y comentados, diferencias exactas y código visualmente demostrativo.
+
+📌 ¿Qué es XHTML y en qué se diferencia de HTML?
+🔹 HTML (HyperText Markup Language)
+Es el lenguaje estándar para la creación de páginas web. Es flexible y perdona errores, ya que los navegadores intentan corregirlos automáticamente.
+✔ Ejemplo de HTML válido pero con errores:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo HTML</title>
+</head>
+<body>
+    <h1>Hola, mundo!</h1>
+    <img src="imagen.jpg"> No está cerrada, pero funciona en HTML 
+</body>
+</html>
+
+🔹 Funciona sin problemas, aunque <img> no está cerrada.
+
+🔹 XHTML (Extensible HyperText Markup Language)
+Es una versión más estricta de HTML, basada en XML.
+✔ Diferencias clave con HTML:
+ 1️⃣ TODAS las etiquetas deben estar en minúsculas.
+ 2️⃣ TODAS las etiquetas deben cerrarse correctamente.
+ 3️⃣ TODOS los atributos deben llevar comillas ("").
+ 4️⃣ El documento debe ser bien estructurado y validado.
+✔ Ejemplo de XHTML correctamente escrito:
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ejemplo XHTML</title>
+</head>
+<body>
+    <h1>Hola, mundo!</h1>
+    <img src="imagen.jpg" alt="Ejemplo de imagen" />
+</body>
+</html>
+
+📌 Efecto visual: Se verá igual que el HTML anterior, pero XHTML requiere una sintaxis estricta.
+✔ Errores comunes en XHTML (que en HTML sí funcionan):
+ ❌ <IMG SRC="imagen.jpg"> → ❌ Mayúsculas.
+ ❌ <br> → ❌ No cerrado (debe ser <br />).
+ ❌ <input type=text> → ❌ Falta comillas (<input type="text" />).
+
+
+
+📌 Diferencias detalladas entre HTML y XHTML✔ Ejemplo de HTML que es inválido en XHTML:
+<img src="foto.jpg"> <!-- NO se cierra, válido en HTML pero NO en XHTML 
+
+✔ Corrección en XHTML:
+<img src="foto.jpg" alt="Foto de ejemplo" />
+
+✅ Obligatorio cerrarlo con / en XHTML.
+
+📌 Explicación paso a paso del Código XHTML
+Voy a dividir el código XHTML en partes y explicar cada línea con máximo detalle.
+<?xml version="1.0" encoding="UTF-8"?>
+
+✔ ¿Qué hace esto?
+Declara que el documento usa XML versión 1.0.
+Indica que la codificación de caracteres es UTF-8 (soporta ñ, á, é).
+Obligatorio en XHTML, no en HTML5.
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+✔ ¿Qué hace esto?
+Declara que el documento sigue el estándar XHTML 1.0 Strict.
+La URL enlaza a la definición oficial de la estructura XHTML.
+Existen otras versiones de XHTML:
+XHTML 1.0 Strict: NO permite target="_blank" en <a>.
+XHTML 1.0 Transitional: Más flexible, permite target="_blank".
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+✔ ¿Qué hace esto?
+Define que estamos usando XHTML con un espacio de nombres XML válido.
+Necesario en XHTML, innecesario en HTML.
+
+<head>
+    <title>Ejemplo XHTML</title>
+</head>
+
+✔ ¿Qué hace esto?
+El <title> es obligatorio en XHTML.
+En HTML5 podemos omitir <head>, en XHTML NO.
+
+<body>
+    <h1>Hola, mundo!</h1>
+
+✔ ¿Qué hace esto?
+Abre la sección visible del contenido (<body>).
+En XHTML todas las etiquetas deben cerrarse.
+
+<img src="imagen.jpg" alt="Ejemplo de imagen" />
+
+✔ ¿Qué hace esto?
+La imagen debe tener un alt="" obligatorio en XHTML.
+La etiqueta <img> se debe cerrar con / al final.
+
+</body>
+</html>
+
+✔ ¿Qué hace esto?
+Cierra correctamente las etiquetas.
+Si falta algún cierre, XHTML marcará error.
+
+📌 Comparación Visual en un Navegador
+Si guardamos dos archivos, html.html y xhtml.xhtml, y los abrimos en el navegador:
+ ✔ HTML se mostrará bien aunque tenga errores.
+ ✔ XHTML mostrará errores si faltan cierres o comillas.
+🔹 Ejemplo de error en XHTML:
+ Si escribimos esto en un archivo .xhtml:
+<input type=text>  <!-- Esto generará un error en XHTML 
+
+📌 El navegador mostrará error porque falta type="text" con comillas y la etiqueta debe cerrarse (<input type="text" />).
+
+📌 ¿Cuándo deberíamos usar XHTML en lugar de HTML5?
+✔ Si necesitas compatibilidad con XML.
+ ✔ Si quieres código más limpio y estructurado.
+ ✔ Si trabajas con sistemas que requieren XHTML.
+🔹 Hoy en día, HTML5 es el estándar más usado porque es más flexible y moderno.
+
+📌 Ejercicio Práctico para Clase 📚
+1️⃣ Crear dos archivos:
+ejemplo.html con código HTML tradicional.
+ejemplo.xhtml con código XHTML válido.
+2️⃣ Abrir ambos en el navegador y probar:
+Omitir el cierre de etiquetas en XHTML → ¿Funciona? (NO).
+Escribir mayúsculas en XHTML → ¿Funciona? (NO).
+Eliminar alt="" en la imagen de XHTML → ¿Funciona? (NO).
+📌 Objetivo: Ver que XHTML es más estricto que HTML y cómo afecta el código en
+ la práctica
+
+
+ Es más estricto XHTML que HTML por eso nos mostrarái HTML aún teniendo error pero no 
+ XHTML.
