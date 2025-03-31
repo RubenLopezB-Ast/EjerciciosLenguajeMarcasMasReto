@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: yellow;
+    color: black;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.header{
+    background-color:chocolate;
+    color: white;
+    line-height: 2.3;
+    padding: 40px;
+}
+
+.titulo-principal{
+    font-size: 2rem;
+    margin-bottom: auto;
+}
+
+.subtitulo{
+    background-color: brown;
+    font-style: italic;
+    color:white;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background-color: rgba(255, 98, 0, 0.36);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.menu a{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 1s ease;
+}
+
+.menu a:hover{
+    color: white;
+}
+
+
+.main{
+    margin-top: 30px;
+}
+
+.contenido{
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20 px;
+    justify-content: space-between;
+}
+
+.tarjeta{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    transform: transform 3s ease, box-shadow 2s ease;
+}
