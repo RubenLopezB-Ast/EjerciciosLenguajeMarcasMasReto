@@ -4,7 +4,7 @@ body{
 }
 
 h1{
-    color: barkblue;
+    color: darkblue;
     text-align: center;
 }
 
@@ -27,4 +27,148 @@ a{
 a:hover{
     color: blue;
     text-decoration: underline;
+}
+
+table{
+    border-collapse: collapse;
+    width: 60%;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td{
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+thead{
+    background-color: #acaf50;
+    color: white;
+}
+
+tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover{
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+table:nth-of-type(2) thead{
+    background-color: #2196F3;
+}
+
+/* Contenedor de scroll */
+.tabla-scroll{
+    max-height: 300px;      /* alto visibl; ajusta a tu gusto*/
+    overflow: auto;         /* activa scroll vertical y horizontal si hace falta*/
+    margin: auto;
+    width: 90%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,.08);
+}
+
+/* La tabla en sí */
+.tabla-scroll .tabla-larga{
+    width: 100%;
+    border-radius: collapse;
+    min-width: 700px;      /* fuerza scroll horizontal en patallar estrechas */
+}
+
+/* Reusamos tus estilos base y afinamos */
+.tabla-scroll th, .tabla-scroll td{
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+    background: #fff;   /* fondo para el sticky no transparente */
+    white-space: nowrap;    /* evita saltos feos cuando hay scroll horizontal */
+}
+
+/* Encabezado fijo (se pega arriba al hacer scroll) */
+.tabla-scroll thead th {
+    position: sticky;
+    top:0;
+    background: #4CAF50;
+    color: #fff;
+    z-index: 2;         /* por encima de las celdas normales */
+}
+
+/* Primera columna fija (se pega a la izquierda) */
+.tabla-scroll th:first-child,
+.tabla-scroll td:first-child {
+    position: sticky;
+    left:0;
+    z-index: 1;     /*por encima del reso de las celdas*/
+}
+
+/*Evitar que la esquina  (th de la esquina superior izquierda) quede por debajo */
+.tabla-scroll thead th:first-child{
+    z-index: 3;         /*más alto que header y primera col */
+}
+
+/* Rayado de filas y hover (bompatibles con la columna fija) */
+.tabla-scroll tbody tr:nth-child(even) td{
+    background: #f9f9f9;
+}
+.tabla-scroll thbody tr:hover td{
+    background: #eee;
+}
+.tabla-scroll tbody tr:nth-child(even):hover td{
+    background: #e6e6e6;
+}
+
+/*Versión "cards" en pantallas pequeñas */
+@media (max-width: 600px){
+    .tabla-scroll{max-height: none; overflow: visible;} /*que se vea en todo el movil*/
+    .tabla-scroll .tabla-larga,
+    .tabla-scroll thead,
+    .tabla-scroll tbody,
+    .tabla-scroll th,
+    .tabla-scroll td, 
+    .tabla-scroll tr { display: block; width: 100%;}
+
+    .tabla-scroll thead{
+        /* ocultamos el header visual, los lables irán en cada celda */
+        height: 0; overflow: hidden; position: absolute; left: -9999px;
+    }
+
+    .tabla-scroll tf{
+        background: #fff;
+        margin: 10px 0;
+        border: 1px solid #e5e5e5;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0,0,0,.04);
+    }
+
+    .tabla-scroll td{
+        border: none;
+        border-bottom: 1px solid #f0f0f0;
+        padding: 10px 12px 10px 120px;  /* espacio para la etiqueta */
+        position: relative;
+        white-space: normal;
+    }
+
+    .tabla-scroll td:last-child { border-bottom: none;}
+
+    .tabla-scroll td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        top: 10px;
+        width: 100px;
+        font-weight: bold;
+        color: #666;
+    }
+
+    /* Desactivamos sticky en móvil para activar solapes raros */
+    .tabla-scroll thead th,
+    .tabla-scroll th:first-child,
+    .tabla-scroll td:first-child{
+        position: static;
+        z-index: auto;
+    }
 }

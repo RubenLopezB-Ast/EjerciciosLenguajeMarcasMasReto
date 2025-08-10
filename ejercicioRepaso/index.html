@@ -13,8 +13,126 @@
     <img src="https://via.placeholder.com/200" alt="Imagen de ejemplo de repaso">
 
     <p>Visita mi sitio favorito:
-        <a href="https://www.google.com" target="_blank">Google</a>
+        <a href="https://www.google.es" target="_blank">Google</a>
     </p>
     
+    <h2>Tabla de ejemplo</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Ciudad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rubén</td>
+                <td>41</td>
+                <td>Asturias</td>
+            </tr>
+            <tr>
+                <td colspan="2">Total de personas</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+<h2>Tabla con celdas combinadas</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+            <th>Profesión</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!--Combina dos filas verticalmente con rowspan-->
+            <td rowspan="2">Rubén</td>
+            <td>41</td>
+            <td>Madrid</td>
+            <td>Consultor</td>
+        </tr>
+        <tr>
+            <td>49</td>
+            <td>Asturias</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>La Rioja</td>
+            <td>Diseñador</td>
+        </tr>
+        <tr>
+            <td>Eva</td>
+            <td>39</td>
+            <!--Combina horizontalmente dos columnas con colspan-->
+            <td colspan="2">Ingeniería y docencia</td>
+        </tr>
+    </tbody>
+</table>
+<h2>Tabla larga con encabezado y primera columna fijos</h2>
+
+<!-- Filtro por estado -->
+<label for="filtro-estado"><strong>Filtrar por estado:</strong></label>
+<select id="filtro-estado">
+    <option value="todos">Todos</option>
+    <option value="Activo">Activo</option>
+    <option value="Inactivo">Inactivo</option>
+</select>
+
+<div class="tabla-scroll">
+    <table class="tabla-larga">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Departamentos</th>
+                <th>Ciudad</th>
+                <th>Rol</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Repite y modifica estas filas para simular una tabla larga-->
+            <tr><td>1</td><td>Rubén</td><td>IT</td><td>Madrid</td><td>Dev</td><td>Activo</td></tr>
+      <tr><td>2</td><td>Ana</td><td>HR</td><td>Barcelona</td><td>Recruiter</td><td>Activo</td></tr>
+      <tr><td>3</td><td>Diego</td><td>Ventas</td><td>Sevilla</td><td>Comercial</td><td>Inactivo</td></tr>
+      <tr><td>4</td><td>Lucía</td><td>IT</td><td>Valencia</td><td>QA</td><td>Activo</td></tr>
+      <tr><td>5</td><td>Carlos</td><td>Finanzas</td><td>Zaragoza</td><td>Analista</td><td>Activo</td></tr>
+      <tr><td>6</td><td>Mar</td><td>Marketing</td><td>Bilbao</td><td>SEO</td><td>Activo</td></tr>
+      <tr><td>7</td><td>Elena</td><td>IT</td><td>Granada</td><td>DevOps</td><td>Activo</td></tr>
+      <tr><td>8</td><td>Pablo</td><td>Ventas</td><td>Málaga</td><td>Comercial</td><td>Inactivo</td></tr>
+      <tr><td>9</td><td>Sara</td><td>IT</td><td>Murcia</td><td>Frontend</td><td>Activo</td></tr>
+      <tr><td>10</td><td>Jorge</td><td>HR</td><td>Valladolid</td><td>Generalista</td><td>Activo</td></tr>
+      <tr><td>11</td><td>Rubén</td><td>IT</td><td>Madrid</td><td>Dev</td><td>Activo</td></tr>
+      <tr><td>12</td><td>Ana</td><td>HR</td><td>Barcelona</td><td>Recruiter</td><td>Activo</td></tr>
+      <tr><td>13</td><td>Diego</td><td>Ventas</td><td>Sevilla</td><td>Comercial</td><td>Inactivo</td></tr>
+      <tr><td>14</td><td>Lucía</td><td>IT</td><td>Valencia</td><td>QA</td><td>Activo</td></tr>
+      <tr><td>15</td><td>Carlos</td><td>Finanzas</td><td>Zaragoza</td><td>Analista</td><td>Activo</td></tr>
+      <tr><td>16</td><td>Mar</td><td>Marketing</td><td>Bilbao</td><td>SEO</td><td>Activo</td></tr>
+      <tr><td>17</td><td>Elena</td><td>IT</td><td>Granada</td><td>DevOps</td><td>Activo</td></tr>
+      <tr><td>18</td><td>Pablo</td><td>Ventas</td><td>Málaga</td><td>Comercial</td><td>Inactivo</td></tr>
+      <tr><td>19</td><td>Sara</td><td>IT</td><td>Murcia</td><td>Frontend</td><td>Activo</td></tr>
+      <tr><td>20</td><td>Jorge</td><td>HR</td><td>Valladolid</td><td>Generalista</td><td>Activo</td></tr>
+      <!--Añado data-label-->
+      <tr><td data-label="ID">1</td><td data-label="Nombre">Rubén</td><td data-label="Departamento">IT</td><td data-label="Ciudad">Madrid</td><td data-label="Rol">Dev</td><td data-label="Estado">Activo</td></tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    const select = document.getElementById('filtro-estado');
+    const filas = document.getElementById('.tabla-larga tbody tr');
+    select.addEventListener('change',()=>{
+        const val = select.value;
+        filas.forEach(tr =>{
+            const estado = tr.querySelector('td:last-child')?.textContent.trim();
+            tr.style.display = (cal === 'todos' || estado === val)? '':'none';
+        })
+    })
+</script>
 </body>
 </html>
