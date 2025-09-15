@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<email>
+    <correo id="1AAA">
+        <de>rlb210983@gmail.com</de>
+        <para>
+            rlb09@hotmail.es</para>
+        <cc></cc>
+        <cco></cco>
+        <asunto>Correo de prueba</asunto>
+        <mensaje>Hola que tal?</mensaje>
+        </importanciaalta>
+    </correo>
+    <correo id="2AAA">
+        <de>rlb210983@gmail.com</de>
+        <para>
+            rlb09@hotmail.es</para>
+        <cc></cc>
+        <cco></cco>
+        <asunto>Correo de prueba 2</asunto>
+        <mensaje>Hola que tal? Como estaís?</mensaje>
+    </correo>
+</email>

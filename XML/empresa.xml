@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresa>
+    <empleado>
+        <nombre>José</nombre>
+        <apellido>Ramirez Perlora</apellido>
+        <numero>11213</numero>
+        <corrreo>jramp@appe.com</corrreo>
+        <direccion>
+            <ciudad>Jalisco</ciudad>
+            <estado>México</estado>
+            <zip>22321</zip>
+        </direccion>
+    </empleado>
+</empresa>
